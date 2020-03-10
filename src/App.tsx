@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type State = {
+  row0: Array<string>;
+  row1: Array<string>;
+  row2: Array<string>;
+  isToggle: boolean;
+};
+
+type Props = {};
+
+class App extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      row0: ['-', '-', '-'],
+      row1: ['-', '-', '-'],
+      row2: ['-', '-', '-'],
+      isToggle: true
+    };
+  }
+
+  render() {
+    return <div className='App'>hello world hello again!</div>;
+  }
 }
 
 export default App;
